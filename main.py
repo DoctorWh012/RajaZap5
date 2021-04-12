@@ -1,11 +1,11 @@
 from tkinter import *
+from pyperclip import copy
+from pynput.keyboard import Controller, Key
 
 
 # Funcoes
 
 def raja():
-    from pyperclip import copy
-    from pynput.keyboard import Controller, Key
     global spam
     global enviado
     global countdown
@@ -14,7 +14,7 @@ def raja():
     kb = Controller()
     if spam:
         if enviado != int(quantidades):
-            enviado +=1
+            enviado += 1
             if enviado == 1:
                 copy(f'{mensagi}')
             kb.press(Key.ctrl)
@@ -29,7 +29,6 @@ def raja():
         elif enviado == quantidades:
             print('i like ya cut')
             spam = False
-        # print('iceee')
 
 
 def comeca():
@@ -67,8 +66,8 @@ def comeca():
 root = Tk()
 root.title('Rajador_5.0 By D0C_')
 root.geometry('350x500')
-imagem = PhotoImage(file='N1-L3.png')
-root.iconphoto(False, imagem)
+# imagem = PhotoImage(file='N1-L3.png')
+# root.iconphoto(False, imagem)
 
 # Variables
 enviado = 0
